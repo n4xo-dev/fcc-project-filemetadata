@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(multer({ dest: '../uploads/' }).single('upfile'));
-app.use('/public', express.static(process.cwd() + '/public'));
+// app.use('/public', express.static(process.cwd() + '/public'));
 
-app.get('/', function (req, res) {
-  res.sendFile(process.cwd() + '/public/index.html');
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(process.cwd() + '/public/index.html');
+// });
 
 
 apiRouter(app);
